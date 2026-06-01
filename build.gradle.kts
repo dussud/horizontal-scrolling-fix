@@ -39,7 +39,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation("net.fabricmc.fabric-api:fabric-api:${providers.gradleProperty("fabric_api_version").get()}")
 
-    implementation("net.uku3lig:ukulib:${providers.gradleProperty("ukulib_version").get()}")
+    modImplementation("net.uku3lig:ukulib:${providers.gradleProperty("ukulib_version").get()}")
 }
 
 tasks.processResources {
