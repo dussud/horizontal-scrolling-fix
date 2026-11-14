@@ -38,8 +38,8 @@ dependencies {
      * Fetches only the required Fabric API modules to not waste time downloading all of them for each version.
      * @see <a href="https://github.com/FabricMC/fabric">List of Fabric API modules</a>
      */
-    fun fapi(vararg modules: String) {
-        for (it in modules) modImplementation(fabricApi.module(it, sc.properties["deps.fabric_api"]))
+    fun fapi(configuration: String, vararg modules: String) {
+        for (it in modules) add(configuration, fabricApi.module(it, sc.properties["deps.fabric_api"]))
     }
 
     minecraft("com.mojang:minecraft:${sc.current.version}")
@@ -48,11 +48,14 @@ dependencies {
 
     modImplementation("net.fabricmc:fabric-loader:${property("deps.fabric_loader")}")
 
-//    modImplementation("net.fabricmc.fabric-api:fabric-api:${property("deps.fabric_api")}")
-
     modImplementation("net.uku3lig:${ukulib}:${property("deps.ukulib")}")
 
     modLocalRuntime("maven.modrinth:modmenu:${property("deps.modmenu")}")
+
+    when {
+        sc.current.parsed >= "1.21" -> fapi("modLocalRuntime", "fabric-screen-api-v1", "fabric-lifecycle-events-v1")
+        else -> fapi("modLocalRuntime", "fabric-screen-api-v1", "fabric-key-binding-api-v1", "fabric-lifecycle-events-v1")
+    }
 }
 
 loom {
@@ -129,42 +132,3 @@ tasks {
         dependsOn("build")
     }
 }
-
-//tasks.processResources {
-//    val version = version
-//    inputs.property("version", version)
-//
-//    filesMatching("fabric.mod.json") {
-//        expand("version" to version)
-//    }
-//}
-//
-//tasks.withType<JavaCompile>().configureEach {
-//    options.release = 21
-//}
-//
-//tasks.jar {
-//    val projectName = project.name
-//    inputs.property("projectName", projectName)
-//
-//    from("LICENSE") {
-//        rename { "${it}_$projectName" }
-//    }
-//}
-//
-//// configure the maven publication
-//publishing {
-//    publications {
-//        register<MavenPublication>("mavenJava") {
-//            from(components["java"])
-//        }
-//    }
-//
-//    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-//    repositories {
-//        // Add repositories to publish to here.
-//        // Notice: This block does NOT have the same function as the block in the top level.
-//        // The repositories here will be used for publishing your artifact, not for
-//        // retrieving dependencies.
-//    }
-//}
