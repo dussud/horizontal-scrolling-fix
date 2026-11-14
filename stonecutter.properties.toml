@@ -1,7 +1,7 @@
 mod.id = "horizontal-scrolling-fix"
 mod.name = "Horizontal Scrolling Fix"
 mod.group = "org.dussud.horizontal_scrolling_fix"
-mod.version = "1.0.0"
+mod.version = "0.3.0"
 
 deps.fabric_loader = "0.19.2"
 loomx.loom_version = "1.16-SNAPSHOT"
