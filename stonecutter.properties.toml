@@ -1,0 +1,119 @@
+mod.id = "horizontal-scrolling-fix"
+mod.name = "Horizontal Scrolling Fix"
+mod.group = "org.dussud.horizontal_scrolling_fix"
+mod.version = "0.3.0"
+
+deps.fabric_loader = "0.19.2"
+loomx.loom_version = "1.16-SNAPSHOT"
+
+["1.20.2"]
+mod.mc_compat = "1.20.2"
+mod.mc_releases = ["1.20.2"]
+
+deps.fabric_api = "0.91.6+1.20.2"
+deps.ukulib = "1.0.2+1.20.2"
+deps.modmenu = "8.0.0"
+
+["1.20.3"]
+mod.mc_compat = "1.20.3"
+mod.mc_releases = ["1.20.3"]
+
+deps.fabric_api = "0.91.1+1.20.3"
+deps.ukulib = "1.1.1+1.20.3"
+deps.modmenu = "9.0.0"
+
+["1.20.4"]
+mod.mc_compat = "1.20.4"
+mod.mc_releases = ["1.20.4"]
+
+deps.fabric_api = "0.97.3+1.20.4"
+deps.ukulib = "1.1.2+1.20.4"
+deps.modmenu = "9.0.0"
+
+["1.20.6"]
+mod.mc_compat = "1.20.6"
+mod.mc_releases = ["1.20.6"]
+
+deps.fabric_api = "0.100.8+1.20.6"
+deps.ukulib = "1.2.1+1.20.6"
+deps.modmenu = "10.0.0"
+
+["1.21"]
+mod.mc_compat = "1.21"
+mod.mc_releases = ["1.21"]
+
+deps.fabric_api = "0.102.0+1.21"
+deps.ukulib = "1.4.1+1.21"
+deps.modmenu = "11.0.0"
+
+["1.21.2"]
+mod.mc_compat = "1.21.2"
+mod.mc_releases = ["1.21.2"]
+
+deps.fabric_api = "0.106.1+1.21.2"
+deps.ukulib = "1.5.0+1.21.2"
+deps.modmenu = "12.0.0"
+
+["1.21.4"]
+mod.mc_compat = "1.21.4"
+mod.mc_releases = ["1.21.4"]
+
+deps.fabric_api = "0.119.4+1.21.4"
+deps.ukulib = "1.6.0+1.21.4"
+deps.modmenu = "13.0.0"
+
+["1.21.5"]
+mod.mc_compat = "1.21.5"
+mod.mc_releases = ["1.21.5"]
+
+deps.fabric_api = "0.128.2+1.21.5"
+deps.ukulib = "1.7.1+1.21.5"
+deps.modmenu = "14.0.0"
+
+["1.21.6"]
+mod.mc_compat = "1.21.6"
+mod.mc_releases = ["1.21.6"]
+
+deps.fabric_api = "0.128.2+1.21.6"
+deps.ukulib = "1.8.2+1.21.6"
+deps.modmenu = "15.0.0"
+
+["1.21.9"]
+mod.mc_compat = "1.21.9"
+mod.mc_releases = ["1.21.9"]
+
+deps.fabric_api = "0.134.1+1.21.9"
+deps.ukulib = "1.9.0+1.21.9"
+deps.modmenu = "16.0.0"
+
+["1.21.11"]
+mod.mc_compat = "1.21.11"
+mod.mc_releases = ["1.21.11"]
+
+deps.fabric_api = "0.141.4+1.21.11"
+deps.ukulib = "1.10.2+1.21.11"
+deps.modmenu = "17.0.0"
+
+["26.1.2"]
+mod.mc_compat = "26.1.2"
+mod.mc_releases = ["26.1.2"]
+
+deps.fabric_api = "0.145.4+26.1.2"
+deps.ukulib = "2.0.0+26.1"
+deps.modmenu = "18.0.0"
+
+["26.2"]
+mod.mc_compat = "26.2"
+mod.mc_releases = ["26.2"]
+
+deps.fabric_api = "0.152.1+26.2"
+deps.ukulib = "2.1.0+26.2"
+deps.modmenu = "20.0.0"
+
+["26.3"]
+mod.mc_compat = "26.3"
+mod.mc_releases = ["26.3"]
+
+deps.fabric_api = "0.160.5+26.3"
+deps.ukulib = "2.2.0+26.3"
+deps.modmenu = "21.0.0"

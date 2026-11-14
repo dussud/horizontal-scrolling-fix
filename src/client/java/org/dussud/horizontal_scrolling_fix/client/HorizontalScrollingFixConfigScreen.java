@@ -17,14 +17,20 @@ public class HorizontalScrollingFixConfigScreen extends AbstractConfigScreen<Hor
 
     @Override
     protected WidgetCreator[] getWidgets(HorizontalScrollingFixConfig config) {
+        //? if >=1.21.6 {
         CyclingOption<Boolean> horizontalScrollingEnabled = CyclingOption.ofBoolean(
                 "horizontal-scrolling-fix.option.horizontalScrollingEnabled",
                 config.isHorizontalScrollingEnabled(),
                 value -> {
                     config.enableHorizontalScrolling(value);
+                    //? if >=26.2 {
+                    /*minecraft.gui.setScreen(new HorizontalScrollingFixConfigScreen(parent));
+                    *///?} else {
                     minecraft.setScreen(new HorizontalScrollingFixConfigScreen(parent));
+                    //?}
                 }
         );
+
         CyclingOption<Boolean> horizontalScrollingDirectionReversed = new CyclingOption<Boolean>(
                 "horizontal-scrolling-fix.option.horizontalScrollingDirectionReversed",
                 List.of(Boolean.TRUE, Boolean.FALSE),
@@ -34,6 +40,19 @@ public class HorizontalScrollingFixConfigScreen extends AbstractConfigScreen<Hor
                 OptionInstance.noTooltip(),
                 config.isHorizontalScrollingEnabled()
         );
+        //?} else {
+        /*CyclingOption<Boolean> horizontalScrollingEnabled = CyclingOption.ofBoolean(
+                "horizontal-scrolling-fix.option.horizontalScrollingEnabled",
+                config.isHorizontalScrollingEnabled(),
+                config::enableHorizontalScrolling
+        );
+
+        CyclingOption<Boolean> horizontalScrollingDirectionReversed = CyclingOption.ofBoolean(
+                "horizontal-scrolling-fix.option.horizontalScrollingDirectionReversed",
+                config.isHorizontalScrollingDirectionReversed(),
+                config::reverseHorizontalScrollingDirection
+        );
+        *///?}
 
         return new WidgetCreator[]{
                 horizontalScrollingEnabled.wide(),

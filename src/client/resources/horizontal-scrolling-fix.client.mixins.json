@@ -1,7 +1,7 @@
 {
 	"required": true,
 	"package": "org.dussud.horizontal_scrolling_fix.client.mixin",
-	"compatibilityLevel": "JAVA_21",
+	"compatibilityLevel": "${java}",
 	"client": [
 		"MouseHandlerMixin"
 	],

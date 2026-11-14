@@ -42,9 +42,8 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19.2",
-		"minecraft": "~1.21.11",
-		"java": ">=21",
-		"fabric-api": "*",
-		"ukulib": "^1.10.2"
+		"minecraft": "${minecraft}",
+		"java": ">=${java_version}",
+		"ukulib": "*"
 	}
 }
