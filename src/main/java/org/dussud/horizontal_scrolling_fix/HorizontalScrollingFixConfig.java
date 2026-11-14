@@ -20,5 +20,9 @@ public class HorizontalScrollingFixConfig implements Serializable {
     }
 
     public boolean horizontalScrollingEnabled = false;
+    //? if >=26.3 {
+    /*public boolean horizontalScrollingDirectionReversed = false;
+    *///? else {
     public boolean horizontalScrollingDirectionReversed =  true;
+    //?}
 }
