@@ -51,18 +51,9 @@ dependencies {
 //    modImplementation("net.fabricmc.fabric-api:fabric-api:${property("deps.fabric_api")}")
 
     modImplementation("net.uku3lig:${ukulib}:${property("deps.ukulib")}")
-}
 
-//loom {
-//    splitEnvironmentSourceSets()
-//
-//    mods {
-//        register("horizontal-scrolling-fix") {
-//            sourceSet(sourceSets.main.get())
-//            sourceSet(sourceSets.getByName("client"))
-//        }
-//    }
-//}
+    modLocalRuntime("maven.modrinth:modmenu:${property("deps.modmenu")}")
+}
 
 loom {
     splitEnvironmentSourceSets()
@@ -93,13 +84,10 @@ loom {
 java {
     withSourcesJar()
 
-    sourceCompatibility = requiredJava
-    targetCompatibility = requiredJava
-
-//    toolchain {
+    toolchain {
 //        vendor = JvmVendorSpec.ADOPTIUM
-//        languageVersion = JavaLanguageVersion.of(requiredJava.majorVersion)
-//    }
+        languageVersion = JavaLanguageVersion.of(requiredJava.majorVersion)
+    }
 }
 
 tasks {
